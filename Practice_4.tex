@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+\parindent=0cm
+
+\usepackage[T2A]{fontenc} % Используем 8-битные шрифты, которые поддерживают кириллицу
+\usepackage[utf8]{inputenc} % Кодировка файла
+\usepackage[english, russian]{babel} % Пакет логики переносов
+\usepackage{amsmath, amssymb}
+
+\newcommand{\nl}{\vspace{\baselineskip}} % Команда создания пустой строки
+
+\begin{document}
+\begin{center} \bf{Домашнее задание по практике 4} \end{center}
+
+$$
+(-1)^p \det \textbf{C}
+\begin{pmatrix}
+i_1 &i_2 &\ldots & i_p \\
+i_1 &i_2 &\ldots &i_p
+\end{pmatrix}
+ > 0, \;
+\begin{aligned}
+&1 \leq i_1 < i_2 < \ldots <  i_1 \leq  n;\\
+&p = 1, 2, \ldots, n,
+\end{aligned} \eqno (11)
+$$
+
+$$
+\begin{pmatrix}
+||\textbf{A}^{(-1)}_{11}|| &||\textbf{A}^{(-1)}_{12}|| \\
+||\textbf{A}^{(-1)}_{21}|| &||\textbf{A}^{(-1)}_{22}||
+\end{pmatrix}
+\leq \frac{
+\begin{pmatrix}
+||\textbf{A}^{-1}_{22}||^{-1} &||\textbf{A}_{12}|| \\
+||\textbf{A}^{-1}_{21}|| &||\textbf{A}^{-1}_{11}||^{-1} \\
+\end{pmatrix}
+}
+{
+||\textbf{A}^{-1}_{11}||^{-1}||\textbf{A}^{-1}_{22}||^{-1} - ||\textbf{A}_{12}||||\textbf{A}_{21}||
+}
+.
+$$
+
+\begin{equation*}
+\begin{split}
+spa \; \textbf{A} \leq \frac{||A_{11}||_{\log} + ||A_{22}||_{\log}}{2} + \\
++ \sqrt{\left( \frac{||A_{11}||_{\log} - ||A_{22}||_{\log}}{2} \right)^2 + ||A_{12}||||A_{21}|| }& < 0.
+\end{split}
+\end{equation*}
+
+\begin{equation*}
+\begin{split}
+&||\textbf{A}||_0 = \max \limits_{1 \leq i \leq n} \sum \limits_{j = 1}^n |a_{ij}|,||\textbf{A}||_1 = \max \limits_{1 \leq i \leq n} \sum \limits_{j = 1}^n |a_{ij}|, \; ||\textbf{A}||_{1/2} = \sqrt{spa \textbf{A} * \textbf{A}}. \\
+&||\textbf{A}||_{0 \log} =  \max \limits_{1 \leq i \leq n} \{\mathrm{Re} \; a_{ii} + p_i(\textbf{A})\}, \\
+&||\textbf{A}||_{1 \log} =  \max \limits_{1 \leq i \leq n} \{\mathrm{Re} \; a_{ii} + q_i(\textbf{A})\}, \\
+&\;\;\;\;\;\;||\textbf{A}||_{1/2 \log} = spa \frac{\textbf{A} + \textbf{A} ^*}{2} .
+\end{split}
+\end{equation*}
+
+\begin{center}
+\textit{Рядом с f\textup{(}x\textup{)} \textup{(}значение функции f в точке x\textup{)} лучше использовать прямые скобки (а не курсивные).}
+\end{center}
+
+\begin{center}
+Когда одно из $_\text{слов}$ набрано шрифтом другого кегиля, это выглядит плохо.
+\end{center}
+
+\begin{center}
+Мы зыкрываем группу и возвращаемся к обычному шрифту только после пустой строки, заверщающей абзац.
+
+Вот шрифт обычного размера.
+
+Здесь мы вернулись к обычному шрифту раньше времени, и межстрочные интервалы оказались слишком велики.
+
+Вот шрифт обычного размера.
+\end{center}
+
+\begin{center}
+Выберем \textbf{полужирный шрифт в \textit{курсивном} начертании} (временно, конечно же).
+\end{center}
+\end{document}

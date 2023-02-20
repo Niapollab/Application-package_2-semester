@@ -1,0 +1,108 @@
+\documentclass[12pt]{article}
+\parindent=0cm
+
+\usepackage[T2A]{fontenc} % Используем 8-битные шрифты, которые поддерживают кириллицу
+\usepackage[utf8]{inputenc} % Кодировка файла
+\usepackage[english, russian]{babel} % Пакет логики переносов
+\usepackage{amsmath, amssymb}
+
+\newcommand{\nl}{\vspace{\baselineskip}} % Команда создания пустой строки
+
+\begin{document}
+\begin{center} \bf{Домашнее задание по практике 2} \end{center}
+
+\begin{center}
+\textbf{Скобки переменного размера}
+\end{center}
+
+$$e =  \lim \limits_{n \to \infty} (1 + \frac{1}{n})^n$$
+
+$$M(f)=\left.\left(\int\limits_a^bf(x)\,dx\right)\right/(b-a)$$
+
+$$\int\limits_a^b\frac12(1+x)^{-3/2}dx=\left.-\frac{1}{\sqrt{1+x}}\right|_a^b$$
+
+$$\left| |x+1|-|x-1|\right| \\ \bigl| |x+1|-|x-1|\bigr|$$
+
+$$\left(\sum_{k=1}^n x^k\right)^2$$
+
+$$\Bigl(\sum_{k=1}^n x^k\Bigr)^2$$
+
+\begin{center}
+\textbf{Перечеркнутые символы}
+\end{center}
+
+Множество $\{x\mid x\not\ni x\}$ существовать не может. В этом состоит парадокс Рассела.
+
+\begin{center}
+\textbf{Формула в рамочке}
+\end{center}
+
+$$\boxed{\iint_{\mathbb R^2}e^{-(x^2+y^2)}\,dx\,dy=\pi}$$
+
+\begin{center}
+\textbf{Надстрочные знаки}
+\end{center}
+
+Часто используется обозначение $$\overline{a_na_{n-1}\ldots a_1a_0}=10^na_n+\ldots+a_0.$$
+Особенно часто так пишут в научно-популярных книгах.\nl
+
+Писать $\tilde i$ некрасиво; лучше писать так: $\tilde\imath$.\nl
+
+Тождество $\widehat{f*g}=\hat f\cdot\hat g$ означает, что преобразование Фурье переводит свертку в произведение.\nl
+
+Рассмотрим вектор $\overrightarrow{AB}$.\nl
+
+Правильно $\Hat{\Hat Z}$, а не $\hat{\hat Z}$.\nl
+
+Множество особенностей многообразия $X$ обозначается $X_{\mathrm{sing}}$.\nl
+
+Алгебра $\mathfrak{sl}_2(\mathbb C)$ играет особую роль в теории представлений.\nl
+
+В формуле $\mathrm{tg} x$ буква $x$ слишком близка к знаку тангенса. А вот в формуле $\sin x$ пробелы правильные.
+
+\begin{center}
+\textbf{Одно над другим (простейшие случаи)}
+\end{center}
+
+$\frac23$ и $\dfrac23$\nl
+
+$2^{\frac35}$ и $2^{\tfrac35}$\nl
+
+$\binom{12}7=792$\nl
+
+Раньше вместо ~$\Gamma^k_{ij}$ писали ~$\left\{ij\atop k\right\}$.
+$${n\choose k}=\frac{n!}{k!(n-k)!}$$
+
+\begin{center}
+\textbf{Задание: набрать текст и формулы}
+\end{center}
+
+$M = \{ x \in A \mid x > 0\}$ \nl
+
+$f: X \rightarrow Y$ \nl
+
+Легко видеть, что $23^{1993} \equiv 1 \; (\bmod\;11)$  \nl
+
+$a^{p-1} \equiv 1 \bmod p$
+
+$a^{p-1} \equiv 1\;(p)$ \nl
+
+$f_*(x) = f(x) \bmod G$ \nl
+
+$\sum\limits_{i = 1}^n n^2 = \frac{n(n+1)(2n+1)}{6}$ \nl
+
+Тот факт, что $\sum_{i = 1}^n (2n - 1) = n^2$, следует из формулы для суммы арифметической прогрессии. \nl
+
+$\varlimsup_{n \to \infty} a_n = \inf_n \sup_{m \geq n} a_m$ \nl
+
+$\mathcal{F}_x = \varinjlim_{U \ni x} \mathcal{F}(U)$ \nl
+
+$\int_0^1 x^2 dx = 1 / 3$ \nl
+
+$\int\limits_0^1 x^2 dx = 1 / 3$ \nl
+
+$\prod_{i=1}^n i = n!$ \nl
+
+В школьных учебниках геометрии встречаются такие формулы, как $AB\;\|\;CD$.
+В университетских учебниках анализа часто пишут $||A|| = \sup(|Ax| / |x|)$.
+\end{document}

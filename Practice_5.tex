@@ -1,0 +1,117 @@
+\documentclass{article}
+
+\usepackage[T2A]{fontenc} % Используем 8-битные шрифты, которые поддерживают кириллицу
+\usepackage[utf8]{inputenc} % Кодировка файла
+\usepackage[english, russian]{babel} % Пакет логики переносов
+\usepackage{amsmath, amssymb, amsfonts}
+
+\newcommand{\nl}{\vspace{\baselineskip}} % Команда создания пустой строки
+
+\begin{document}
+УДК 517.984\nl
+
+\begin{center}
+\textbf{АБСОЛЮТНАЯ ЛОГАРИФМИЧЕСКАЯ НОРМА}\footnote{Работа выполнена при финансовой поддержке РФФИ, No 16-01-00197.}\nl
+
+А. И. Иванов, О. И. Петров \nl
+
+\textit{394006, Воронеж, Университетская пл., 1, Воронежский гос. ун-т.}
+Поступила в редакцию **.11.20** г.\nl
+
+\begin{minipage}{0.88\textwidth}
+\;\,\, В статье вводится и изучается новое понятие – абсолютная логарифмическая норма, – которое имеет много общего с классическим определением логарифмической нормы, данным С. М. Лозинским.
+
+\; \textbf{Ключевые слова:} логарифмическая норма, устойчивость по
+Ляпунову, теория Перрона-Фробениуса неотрицательных матриц.
+\end{minipage}
+\end{center}
+
+\begin{center} 1. ПРЕДВАРИТЕЛЬНЫЕ СВЕДЕНИЯ  \end{center}
+Пусть $\textbf{A} = (a_{ij})$ – квадратная $n \times n$ - матрица и $\lambda_1 (\textbf{A}), \lambda_2 (\textbf{A}), \ldots , \lambda_m (\textbf{A})$ $(m \leq n)$ полный набор попарно различных собственных значений матрицы \textbf{A} (спектр sp \textbf{A}). Введём следующие числовые характеристики спектра
+
+$$
+spa \, \textbf{A} = \max \limits_{1 \leq i \leq m} \textup{Re} \, \lambda_i (\textbf{A}),\; spr \, \textbf{A} = \max \limits_{1 \leq i \leq m} | \lambda_i (\textbf{A})|. \eqno(1)
+$$
+
+\noindent Первая из формул (1.1) называется \textit{cпектральной абсциссой матрицы} \textbf{A}, авторая – хорошо известный её \textit{спектральный радиус}. Отметим, что всегда $|spa \, \textbf{A}| \leq spr \,  \textbf{A}.$
+
+\begin{center} 2. АБСОЛЮТНАЯ ВЕЛИЧИНА (МОДУЛЬ) ВЕКТОРА \end{center}
+Отметим простые свойства абсолютной величины вектора, напоминающие свойства нормы (сравни с [4, с. 127-129])
+
+$1^0 \, |\textbf{x}| \geq \textbf{0},$
+
+$2^0 \, |\textbf{x}| = \textbf{0} \iff \textbf{x} = \textbf{0},$
+
+$3^0 \, |c \textbf{x}|  = |c||\textbf{x}| \, (c \in \mathbb{C}),$
+
+$4^0 \, |\textbf{x} + \textbf{y}| \leq |\textbf{x}| + |\textbf{y}|$ (неравенство треугольника).
+
+\noindent Из этих свойств вытекает обратное неравенство треугольника
+$$
+|\textbf{x} - \textbf{y}| \geq|  \, |\textbf{x}| + |\textbf{y}| \,  |. \eqno(2)
+$$
+
+\textbf{Лемма 1.} \textit{Для произвольных комплексных чисел x и h справедлива
+формула}
+$$
+\lim \limits_{0 < t \to 0} \frac{|x + th| - |x|}{t} = \begin{cases}
+\textup{Re} \, \frac{x \overline{h}}{|x|}, &\text{если} \, x \neq 0; \\
+\; \; \; \; \; |h|, &\text{если} \, x = 0,
+\end{cases} \eqno (3)
+$$
+\textit{\textup{(}где в верхней строке формулы \textup{(3)} черта – это черта комплексного сопряжения\textup{)}.}
+
+\textbf{Теорема 1.} \textit{Дифференциал Гато $[\textbf{x}, \, \textbf{h}] : \mathbb{C}^n  \times \mathbb{C}^n \to \mathbb{R}^n$ обладает следующими свойствами:}
+
+$1^0 \, |[\textbf{x}, \, \textbf{h}]| \leq |\textbf{h}|, \; [\textbf{0}, \, \textbf{h}]  = |\textbf{h}|;$
+
+$2^0 \, [\textbf{x}, \, c\textbf{h}] = с[\textbf{x}, \textbf{h}]$ \,\,\,\, \, \textit{при} $c \geq 0,$
+
+$\;\,\, \,\,\, [\textbf{x}, \, c\textbf{h}] = -с[\textbf{x}, -\textbf{h}]$ \textit{при} $c \geq 0,$
+
+$3^0 \, [\textbf{x}, \textbf{h} + \textbf{k}] \leq [\textbf{x}, \, \textbf{h}] + [\textbf{x}, \, \textbf{k}] $ (\textit{полуаддитивность});
+
+$4^0 \, [\textbf{x}, \textbf{h}] + [\textbf{x}, -\textbf{h}] \geq \textbf{0} \; (= [\textbf{x}, \textbf{0}]).$
+
+По одной из формул получим
+$$
+[\textbf{e}_j, \, \textbf{Ae}_j] =
+\begin{pmatrix}
+|a_{1j}| \\
+\ldots \\
+\textup{Re} \, a_{jj} \\
+\ldots \\
+|a_{nj}| \\
+\end{pmatrix}
+\leq
+\begin{pmatrix}
+c_{1j} \\
+\ldots \\
+a_{jj} \\
+\ldots \\
+c_{nj} \\
+\end{pmatrix} .
+$$
+
+$$
+-\sum \limits_{k = 2}^\infty \frac{t^{k - 1}|\textbf{A}|^k}{k!} + \frac{|\textbf{I} + t\textbf{A}| - |\textbf{I}|}{t} | \leq \textbf{C} + \sum \limits_{k = 2}^\infty \frac{t^{k - 1} \textbf{C}^k}{k!}.
+$$
+
+$$
+\dim \left( \sum \limits_{k = 1}^{m - 1} E_k \right) + \dim E_m = n.
+$$
+
+$$
+\textup{im} \, \textbf{C} \! \dotplus \! \textup{ker} \, \textbf{C} = \mathbb{C}^n.
+$$ \pagebreak
+
+\begin{center}
+СПИСОК ЛИТЕРАТУРЫ
+\end{center}
+
+\begin{enumerate}
+\item \textit{Былов Б. Ф., Виноград Р. Э., Гробман Д. М., Немыцкий В. В.} Теория показателей Ляпунова и её приложения к вопросам устойчивости. – М. : Наука, 1966.
+\item \textit{Лозинский С. М.} Оценка погрешности численного интегрирования обыкновенных дифференциальных уравнений // Изв. вузов. 1958. No 5. С. 52–90.
+\end{enumerate}
+
+\end{document}

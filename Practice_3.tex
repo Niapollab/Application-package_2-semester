@@ -1,0 +1,29 @@
+\documentclass[12pt]{article}
+\parindent=0cm
+
+\usepackage[T2A]{fontenc} % Используем 8-битные шрифты, которые поддерживают кириллицу
+\usepackage[utf8]{inputenc} % Кодировка файла
+\usepackage[english, russian]{babel} % Пакет логики переносов
+\usepackage{amsmath, amssymb}
+
+\newcommand{\nl}{\vspace{\baselineskip}} % Команда создания пустой строки
+
+\begin{document}
+\begin{center} \bf{Домашнее задание по практике 3} \end{center}
+
+$$a^{1 - \sigma} b^\sigma \leq (1 - \sigma)a + \sigma b. \eqno (1.1)$$
+$$\left| \sum \limits_{i = 1}^n x_iy_i \right| \leq \sum\limits_{i = 1}^n |x_i||y_i| \leq \left( \sum\limits_{i = 1}^n |x_i|^{\frac{1}{1 - \sigma}} \right)^{1 - \sigma} \left( \sum\limits_{i = 1}^n |y_i|^{\frac{1}{\sigma}} \right)^{\sigma}. \eqno (1.3)$$
+$$\frac{\sum\limits_{i = 1}^n |x_i||y_i|}{ \left( \sum\limits_{j = 1}^n |x_j|^{\frac{1}{1 - \sigma}} \right)^{1 - \sigma} \left( \sum\limits_{j = 1}^n |y_j|^{\frac{1}{\sigma}} \right)^{\sigma} } \leq 1$$
+$$sp \ A \subseteq \bigcup\limits_{i = 1}^n S(a_{ii}, r_i),\;r_i = min\{p_i, q_i\}.$$
+$$||x||_{\frac{1}{2}} =\left( \sum\limits_{i = 1}^n |x_i|^{{2}} \right)^ {\frac{1}{2}}.$$
+$$||x|| = \begin{cases}
+\max\limits_i |x_i|, &\text{если $\sigma = 0;$}\\
+\left( \sum\limits_{i = 1}^n |x_i|^{\frac{1}{\sigma}} \right)^{\sigma}, &\text{если $0 < \sigma \leq 1.$}
+\end{cases}$$
+$$||A||=\max\limits_{x \neq 0} \frac{||Ax||}{||x||}.$$
+$$||A^k|| = ||\underbrace{AA \ldots A}_\text{k раз}|| \leq ||A||||A|| \ldots ||A|| = ||A||^k.$$
+$$\rho = \lim\limits_{k\to \infty}||A^k||^\frac{1}{k},$$
+$$e^{tA} = I + \sum\limits_{k = 1}^\infty \frac{t^ka^k}{k!},$$
+$$
+\lim\limits_{0<t \to 0} \frac{\ln ||e^{tA}||}{t} = \lim\limits_{0<t \to 0} \frac{\ln ||I + tA||}{t}$$
+\end{document}
